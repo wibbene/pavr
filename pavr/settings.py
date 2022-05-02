@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = 'ijDxPjKzZbobRDv5R6bCvpAMGmXvRIaj5gCD7ZPMkev6JTIbzb6OzLH89Eyl9TGT'
-DEBUG = False 
-ALLOWED_HOSTS = ['pavr.wibben.dev']
+DEBUG = True
+ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://pavr.wibben.dev']
 
 DATABASES = {
@@ -34,6 +34,7 @@ DATABASES = {
         'PASSWORD': '',
         'HOST': 'db.cleonet.xyz',
         'PORT': 3306,
+        'OPTIONS': {'ssl_mode': 'DISABLED'},
     }
 }
 
