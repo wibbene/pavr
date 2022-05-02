@@ -5,3 +5,4 @@ django-widget-tweaks==1.4.12
 Markdown==3.3.6
 python-decouple==3.6
 sqlparse==0.4.2
+gunicorn
