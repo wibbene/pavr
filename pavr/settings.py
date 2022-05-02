@@ -22,15 +22,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = 'ijDxPjKzZbobRDv5R6bCvpAMGmXvRIaj5gCD7ZPMkev6JTIbzb6OzLH89Eyl9TGT'
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = False 
+ALLOWED_HOSTS = ['pavr.wibben.dev']
+CSRF_TRUSTED_ORIGINS = ['https://pavr.wibben.dev']
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pavr',
         'USER': 'pavr',
-        'PASSWORD': 'CHANGEME',
+        'PASSWORD': '',
         'HOST': 'db.cleonet.xyz',
         'PORT': 3306,
     }
