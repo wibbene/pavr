@@ -11,11 +11,11 @@ services:
       - POSTGRES_PASSWORD=postgres
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn pavr.wsgi
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "8720:8000"
     environment:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
